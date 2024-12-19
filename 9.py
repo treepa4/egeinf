@@ -1,14 +1,10 @@
-from functools import lru_cache
+count = 0
+for s in open('9.txt'):
+    M = [int(x) for x in s.split()]
+    minm, maxm = min(M), max(M)
+    A = [x for x in M if x != minm and x!= maxm]
+    B = [x for x in M if M.count(x) == 1]
+ 
+        count+=1
 
-@lru_cache(None)
-def F(n):
-    if n ==41:
-        return 41
-    if n >41 and n %2==0:
-        return F(n-1)-n
-    if n > 41 and n%2!=0:
-        return n*F(n-2)
-
-for i in range(10000):
-    F(i)
-print(F(9093)/F(9089))
+print(count)

@@ -1,4 +1,4 @@
-# result = set()
+        # result = set()
 # for x in range(0,18):
 #     for y in range(9,18):
 #         if x<y:
